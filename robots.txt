@@ -1,0 +1,7 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+Host: https://tebanvisual.com
+Sitemap: https://tebanvisual.com/sitemap.xml

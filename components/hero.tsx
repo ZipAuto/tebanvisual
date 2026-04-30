@@ -153,7 +153,7 @@ export function Hero() {
             </div>
             <div className="text-center">
               <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">8+</p>
-              <p className="text-xs sm:text-sm text-muted-foreground mt-1">Anos</p>
+              <p className="text-xs sm:text-sm text-muted-foreground mt-1">Años</p>
             </div>
             <div className="text-center">
               <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">100%</p>

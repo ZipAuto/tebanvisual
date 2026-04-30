@@ -1,18 +1,37 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import { Camera, Film, Sparkles, Users, Award, Clock, ArrowRight } from "lucide-react"
+import { Camera, Sparkles, Users, Clock, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://tebanvisual.com'
+
 export const metadata: Metadata = {
-  title: "Nosotros | Teban Visual",
-  description: "Conoce a Teban Visual: mas de 8 anos de experiencia creando contenido audiovisual profesional en Colombia.",
+  title: "Quienes Somos | Teban Visual - Productora Audiovisual en Colombia",
+  description:
+    "Conoce a Teban Visual: más de 8 años creando videos musicales, comerciales y contenido audiovisual profesional en Colombia. Equipo apasionado con tecnologia cinematografica de punta.",
+  keywords: [
+    "productora audiovisual Colombia",
+    "equipo de produccion audiovisual",
+    "camarografos Colombia",
+    "directores audiovisuales Colombia",
+    "drones cinematograficos Colombia",
+    "Sony FX6 Colombia",
+  ],
+  alternates: { canonical: `${SITE_URL}/nosotros/` },
+  openGraph: {
+    title: "Quienes Somos | Teban Visual",
+    description:
+      "Equipo de produccion audiovisual profesional con más de 8 años de experiencia en Colombia.",
+    url: `${SITE_URL}/nosotros/`,
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Equipo Teban Visual' }],
+  },
 }
 
 const stats = [
   { value: "500+", label: "Proyectos Realizados" },
-  { value: "8+", label: "Anos de Experiencia" },
+  { value: "8+", label: "Años de Experiencia" },
   { value: "100%", label: "Clientes Satisfechos" },
   { value: "24h", label: "Tiempo de Respuesta" },
 ]
@@ -67,7 +86,7 @@ export default function NosotrosPage() {
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 Somos un equipo de profesionales apasionados por la produccion audiovisual. 
-                Desde hace mas de 8 anos, hemos ayudado a artistas, marcas y empresas a 
+                Desde hace más de 8 años, hemos ayudado a artistas, marcas y empresas a 
                 contar sus historias a traves del lente.
               </p>
               <p className="text-muted-foreground leading-relaxed">

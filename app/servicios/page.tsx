@@ -6,13 +6,30 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { services } from "@/lib/services"
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://tebanvisual.com'
+
 export const metadata: Metadata = {
-  title: "Servicios de Produccion Audiovisual | Teban Visual",
-  description: "Videos musicales, comerciales, eventos, contenido para redes sociales, drones cinematograficos y mas. Servicios de produccion audiovisual profesional en Colombia.",
+  title: "Servicios de Produccion Audiovisual en Colombia | Teban Visual",
+  description:
+    "Videos musicales, comerciales publicitarios, cobertura de eventos, contenido para redes sociales, drones cinematograficos y estrategia audiovisual integral. Cotiza sin compromiso.",
+  keywords: [
+    "servicios produccion audiovisual Colombia",
+    "videos musicales profesionales",
+    "comerciales publicitarios Colombia",
+    "cobertura eventos video",
+    "contenido redes sociales profesional",
+    "drones cinematograficos alquiler Colombia",
+    "estrategia audiovisual marcas",
+    "reels Instagram profesionales Colombia",
+  ],
+  alternates: { canonical: `${SITE_URL}/servicios/` },
   openGraph: {
     title: "Servicios de Produccion Audiovisual | Teban Visual",
-    description: "Videos musicales, comerciales, eventos, contenido para redes sociales y mas.",
-  }
+    description:
+      "Descubre todos nuestros servicios: videos musicales, comerciales, eventos, redes sociales y drones. Calidad cinematografica en Colombia.",
+    url: `${SITE_URL}/servicios/`,
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Servicios Teban Visual' }],
+  },
 }
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {

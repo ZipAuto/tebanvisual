@@ -10,17 +10,17 @@ const features = [
   {
     icon: Camera,
     title: "Equipo Profesional",
-    description: "Camaras Sony, lentes cinematograficos y equipos de iluminacion de ultima generacion."
+    description: "Cámaras Sony, lentes cinematográficos y equipos de iluminación de última generación."
   },
   {
     icon: Film,
-    title: "Calidad Cinematografica",
-    description: "Post-produccion con color grading profesional y efectos visuales de alto nivel."
+    title: "Calidad Cinematográfica",
+    description: "Post-producción con color grading profesional y efectos visuales de alto nivel."
   },
   {
     icon: Sparkles,
-    title: "Creatividad Sin Limites",
-    description: "Cada proyecto es unico. Desarrollamos conceptos creativos adaptados a tu vision."
+    title: "Creatividad Sin Límites",
+    description: "Cada proyecto es único. Desarrollamos conceptos creativos adaptados a tu visión."
   },
   {
     icon: Users,
@@ -31,7 +31,7 @@ const features = [
 
 const stats = [
   { value: "500+", label: "Proyectos Realizados" },
-  { value: "8+", label: "Anos de Experiencia" },
+  { value: "8+", label: "Años de Experiencia" },
   { value: "50+", label: "Clientes Satisfechos" },
   { value: "24h", label: "Tiempo de Respuesta" },
 ]
@@ -55,8 +55,8 @@ export function AboutSection() {
                   <div className="space-y-3 md:space-y-4">
                     <div className="relative aspect-[3/4] rounded-xl md:rounded-2xl overflow-hidden group">
                       <Image
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5849.JPG-BWNxDVFffIzUJXtjgvuQtcmCXjRQ1D.jpeg"
-                        alt="Teban Visual en accion"
+                        src="/Fotografia/DSC05223-2.jpg"
+                        alt="Teban Visual en acción"
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />
@@ -70,7 +70,7 @@ export function AboutSection() {
                   <div className="space-y-3 md:space-y-4 pt-6 md:pt-8">
                     <div className="relative aspect-[3/4] rounded-xl md:rounded-2xl overflow-hidden group">
                       <Image
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_0114.JPG-xYFomn9ReppjNSRWp1Md7qIvLe7U1j.jpeg"
+                        src="/piloto1.jpg"
                         alt="Piloto de drone FPV"
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -78,11 +78,11 @@ export function AboutSection() {
                     </div>
                   </div>
                 </div>
-                
-                {/* Badge - Mobile adjusted */}
+
+                {/* Badge */}
                 <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-6 py-3 rounded-xl shadow-lg">
                   <p className="text-xl md:text-2xl font-bold text-center">8+</p>
-                  <p className="text-xs md:text-sm whitespace-nowrap">Anos de experiencia</p>
+                  <p className="text-xs md:text-sm whitespace-nowrap">Años de experiencia</p>
                 </div>
               </div>
             </FadeIn>
@@ -94,12 +94,12 @@ export function AboutSection() {
                   Sobre Nosotros
                 </span>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mt-4 mb-4 md:mb-6 leading-tight">
-                  Pasion por contar historias a traves del lente
+                  Pasión por contar historias a través del lente
                 </h2>
                 <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-6 md:mb-8">
-                  En Teban Visual combinamos creatividad, tecnologia y pasion para crear 
-                  contenido audiovisual que impacta. Desde videos musicales hasta campanas 
-                  publicitarias, cada proyecto recibe nuestra dedicacion completa.
+                  En Teban Visual combinamos creatividad, tecnología y pasión para crear
+                  contenido audiovisual que impacta. Desde videos musicales hasta campañas
+                  publicitarias, cada proyecto recibe nuestra dedicación completa.
                 </p>
 
                 {/* Features - Mobile 2 columns */}
@@ -120,7 +120,7 @@ export function AboutSection() {
                 </div>
 
                 <Button asChild size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground">
-                  <Link href="/nosotros">Conocer mas</Link>
+                  <Link href="/nosotros">Conocer más</Link>
                 </Button>
               </div>
             </FadeIn>

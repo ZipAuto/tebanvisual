@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Phone, Mail, MapPin, Send, CheckCircle, ArrowRight, ArrowLeft, MessageCircle } from "lucide-react"
+import { Send, CheckCircle, ArrowRight, ArrowLeft, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -11,7 +11,6 @@ import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Card, CardContent } from "@/components/ui/card"
-import { services } from "@/lib/services"
 import { FadeIn } from "@/components/parallax-section"
 import { cn } from "@/lib/utils"
 
@@ -90,7 +89,7 @@ export default function CotizarPage() {
     }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
 

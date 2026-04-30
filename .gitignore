@@ -25,3 +25,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Large video files (>100MB — GitHub file limit)
+# Host these on YouTube/Vimeo or compress to <50MB for deployment
+public/videopresentacion.mp4
+"public/Rancho del vaquero final audio.mp4"
+public/Rancho*
+
+# Lock files — use only one package manager
+package-lock.json

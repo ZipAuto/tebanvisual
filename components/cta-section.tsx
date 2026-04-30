@@ -1,41 +1,25 @@
 "use client"
 
-import { useRef, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, MessageCircle } from "lucide-react"
 import { FadeIn } from "@/components/parallax-section"
 
-const BASE_PATH = "/tebanvisual"
-
 export function CTASection() {
-  const videoRef = useRef<HTMLVideoElement>(null)
-
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.playbackRate = 0.75
-    }
-  }, [])
-
   return (
     <section className="relative overflow-hidden">
-      {/* Video background */}
+      {/* Static background image */}
       <div className="absolute inset-0 z-0">
-        <video
-          ref={videoRef}
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-          poster={`${BASE_PATH}/DeSolaSol.jpg`}
-        >
-          <source src={`${BASE_PATH}/videopresentacion.mp4`} type="video/mp4" />
-        </video>
-        {/* Dark overlay */}
+        <Image
+          src="/DeSolaSol.jpg"
+          alt="Teban Visual - Produccion Audiovisual"
+          fill
+          className="object-cover"
+          priority={false}
+        />
         <div className="absolute inset-0 bg-background/75" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-transparent to-background/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background/70" />
       </div>
 
       <div className="relative z-10 py-20 md:py-32">
@@ -52,10 +36,10 @@ export function CTASection() {
               />
 
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 md:mb-6 leading-tight">
-                Listo para llevar tu proyecto al siguiente nivel?
+                ¿Listo para llevar tu proyecto al siguiente nivel?
               </h2>
               <p className="text-muted-foreground text-base md:text-lg mb-8 md:mb-10 leading-relaxed max-w-2xl mx-auto">
-                Contactanos hoy y recibe una cotizacion personalizada para tu proyecto.
+                Contáctanos hoy y recibe una cotización personalizada para tu proyecto.
                 Sin compromisos, solo soluciones creativas.
               </p>
 
@@ -88,7 +72,6 @@ export function CTASection() {
                 </Button>
               </div>
 
-              {/* Trust badges */}
               <div className="mt-10 md:mt-12 flex flex-wrap items-center justify-center gap-6 md:gap-8 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-[#25D366]" />
@@ -100,7 +83,7 @@ export function CTASection() {
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-primary" />
-                  <span>Cotizacion gratis</span>
+                  <span>Cotización gratis</span>
                 </div>
               </div>
             </div>

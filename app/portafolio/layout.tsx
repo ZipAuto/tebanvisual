@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://tebanvisual.com'
 
 export const metadata: Metadata = {
-  title: "Portafolio | Teban Visual - Trabajos de Produccion Audiovisual",
+  title: "Portafolio - Trabajos de Produccion Audiovisual",
   description:
     "Explora el portafolio de Teban Visual: videos musicales, comerciales, eventos, fotografia y mas. Mas de 500 proyectos realizados en Colombia con calidad cinematografica.",
   keywords: [

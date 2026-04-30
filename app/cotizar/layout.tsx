@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://tebanvisual.com'
 
 export const metadata: Metadata = {
-  title: "Cotizar Proyecto Audiovisual | Teban Visual",
+  title: "Cotizar Proyecto Audiovisual",
   description:
     "Solicita una cotizacion gratis para tu video musical, comercial, evento o contenido para redes sociales. Respondemos en menos de 24 horas. Sin compromisos.",
   keywords: [

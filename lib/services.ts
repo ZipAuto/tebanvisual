@@ -23,28 +23,28 @@ export const services: ServiceCategory[] = [
     id: "videos-musicales",
     slug: "videos-musicales",
     title: "Videos Musicales",
-    subtitle: "Tu musica merece ser vista",
-    description: "Produccion cinematografica para artistas que buscan destacar. Desde videoclips sencillos hasta producciones con narrativa compleja, creamos visuales que conectan con tu audiencia.",
+    subtitle: "Tu música merece ser vista",
+    description: "Producción cinematográfica para artistas que buscan destacar. Desde videoclips sencillos hasta producciones con narrativa compleja, creamos visuales que conectan con tu audiencia.",
     icon: "music",
     features: [
-      "Direccion artistica profesional",
-      "Grabacion en 4K/6K cinematografico",
+      "Dirección artística profesional",
+      "Grabación en 4K/6K cinematográfico",
       "Color grading estilo cine",
       "Efectos visuales y motion graphics",
       "Locaciones indoor y outdoor",
-      "Drones cinematograficos incluidos"
+      "Drones cinematográficos incluidos"
     ],
     portfolio: [
       {
         id: "vm-1",
-        title: "Videoclip Regional Mexicano",
-        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5849.JPG-BWNxDVFffIzUJXtjgvuQtcmCXjRQ1D.jpeg",
+        title: "Producción Musical BTS",
+        image: "/Fotografia/DSC_8852.jpg",
         category: "Videos Musicales"
       },
       {
         id: "vm-2",
-        title: "Behind The Scenes",
-        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5853.JPG-tuyAFBW9jpDevVyuUx8qdAsU322JU3.jpeg",
+        title: "Artista en Set",
+        image: "/Fotografia/IMG_9881.JPG.jpeg",
         category: "Videos Musicales"
       }
     ],
@@ -59,17 +59,23 @@ export const services: ServiceCategory[] = [
     icon: "video",
     features: [
       "Concepto creativo y guion",
-      "Produccion de alto impacto",
-      "Casting y direccion de talento",
-      "Post-produccion cinematografica",
+      "Producción de alto impacto",
+      "Casting y dirección de talento",
+      "Post-producción cinematográfica",
       "Adaptaciones para todas las plataformas",
-      "Musica y sonido con licencia"
+      "Música y sonido con licencia"
     ],
     portfolio: [
       {
         id: "com-1",
-        title: "Spot Publicitario",
-        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5849.JPG-BWNxDVFffIzUJXtjgvuQtcmCXjRQ1D.jpeg",
+        title: "Palatino Grill",
+        image: "/Fotografia/DSC06308.jpg",
+        category: "Comerciales"
+      },
+      {
+        id: "com-2",
+        title: "Rancho del Vaquero",
+        image: "/Fotografia/DSC08444.jpg",
         category: "Comerciales"
       }
     ],
@@ -80,27 +86,27 @@ export const services: ServiceCategory[] = [
     slug: "eventos",
     title: "Eventos",
     subtitle: "Captura cada momento",
-    description: "Cobertura profesional de eventos corporativos, sociales y conciertos con equipos de ultima generacion. Cada momento importante merece ser inmortalizado.",
+    description: "Cobertura profesional de matrimonios, bodas, eventos corporativos y empresariales con equipos de última generación. Cada momento importante merece ser inmortalizado.",
     icon: "calendar",
     features: [
-      "Equipo multicamara profesional",
+      "Equipo multicámara profesional",
       "Cobertura con drones",
-      "Transmision en vivo disponible",
-      "Edicion rapida para highlights",
-      "Video resumen cinematografico",
+      "Transmisión en vivo disponible",
+      "Edición rápida para highlights",
+      "Video resumen cinematográfico",
       "Entrega express disponible"
     ],
     portfolio: [
       {
         id: "ev-1",
-        title: "Sesion Quince Anos",
-        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSC07862-EtDgzntk39dlNmryFEbwDm5FvDak2s.jpg",
+        title: "Sesión Quince Años",
+        image: "/Fotografia/DSC09830.jpg.jpeg",
         category: "Eventos"
       },
       {
         id: "ev-2",
-        title: "Sesion Elegante",
-        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSC_9882-o8JPdGbblw9dDMRM4QdCDBmkLuU2O7.jpg",
+        title: "Evento Elegante",
+        image: "/Fotografia/DSC09735 2.jpg.jpeg",
         category: "Eventos"
       }
     ],
@@ -111,21 +117,27 @@ export const services: ServiceCategory[] = [
     slug: "redes-sociales",
     title: "Redes Sociales",
     subtitle: "Contenido que conecta",
-    description: "Creacion de contenido optimizado para Instagram, TikTok, YouTube y todas las plataformas digitales. Contenido viral que posiciona tu marca.",
+    description: "Creación de contenido optimizado para Instagram, TikTok, YouTube y todas las plataformas digitales. Contenido viral que posiciona tu marca.",
     icon: "share",
     features: [
       "Estrategia de contenido mensual",
       "Reels, TikToks y Shorts",
       "Formato vertical optimizado",
       "Tendencias y viral content",
-      "Calendario de publicacion",
-      "Analisis y metricas"
+      "Calendario de publicación",
+      "Análisis y métricas"
     ],
     portfolio: [
       {
         id: "rs-1",
-        title: "Contenido para Instagram",
-        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5849.JPG-BWNxDVFffIzUJXtjgvuQtcmCXjRQ1D.jpeg",
+        title: "Contenido Lifestyle",
+        image: "/Fotografia/DSC_2086.jpg.jpeg",
+        category: "Redes Sociales"
+      },
+      {
+        id: "rs-2",
+        title: "Sesión Urbana",
+        image: "/Fotografia/IMG_1416.JPG.jpeg",
         category: "Redes Sociales"
       }
     ],
@@ -135,22 +147,28 @@ export const services: ServiceCategory[] = [
     id: "booking-drones",
     slug: "booking-drones",
     title: "Booking Drones",
-    subtitle: "Perspectivas unicas",
-    description: "Alquiler de drones cinematograficos con piloto certificado para tus producciones aereas. Tomas espectaculares que elevan tu proyecto.",
+    subtitle: "Perspectivas únicas",
+    description: "Alquiler de drones cinematográficos con piloto certificado para tus producciones aéreas. Tomas espectaculares que elevan tu proyecto.",
     icon: "plane",
     features: [
       "Drones DJI profesionales",
       "Piloto certificado incluido",
-      "Grabacion 4K/6K RAW",
-      "FPV cinematografico disponible",
+      "Grabación 4K/6K RAW",
+      "FPV cinematográfico disponible",
       "Seguro de vuelo incluido",
       "Permisos gestionados"
     ],
     portfolio: [
       {
         id: "dr-1",
-        title: "Vuelo FPV Cinematografico",
-        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_0114.JPG-xYFomn9ReppjNSRWp1Md7qIvLe7U1j.jpeg",
+        title: "Piloto FPV Certificado",
+        image: "/piloto1.jpg",
+        category: "Drones"
+      },
+      {
+        id: "dr-2",
+        title: "Operador DJI Profesional",
+        image: "/piloto2.jpg",
         category: "Drones"
       }
     ],
@@ -160,26 +178,32 @@ export const services: ServiceCategory[] = [
     id: "produccion-estrategia",
     slug: "produccion-estrategia",
     title: "Produccion + Estrategia",
-    subtitle: "Vision integral",
-    description: "Consultoria y produccion audiovisual estrategica para marcas que buscan resultados a largo plazo. Tu socio creativo de confianza.",
+    subtitle: "Visión integral",
+    description: "Consultoría y producción audiovisual estratégica para marcas que buscan resultados a largo plazo. Tu socio creativo de confianza.",
     icon: "lightbulb",
     features: [
-      "Analisis de marca y competencia",
+      "Análisis de marca y competencia",
       "Estrategia audiovisual integral",
-      "Produccion continua mensual",
-      "Direccion creativa dedicada",
-      "Metricas y optimizacion",
+      "Producción continua mensual",
+      "Dirección creativa dedicada",
+      "Métricas y optimización",
       "Soporte prioritario"
     ],
     portfolio: [
       {
         id: "pe-1",
-        title: "Campana Integral",
-        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5853.JPG-tuyAFBW9jpDevVyuUx8qdAsU322JU3.jpeg",
+        title: "Planificación Estratégica",
+        image: "/Estrategia.jpg",
+        category: "Estrategia"
+      },
+      {
+        id: "pe-2",
+        title: "Ejecución y Resultados",
+        image: "/Estrategia2.jpeg",
         category: "Estrategia"
       }
     ],
-    cta: "Agendar Consultoria"
+    cta: "Agendar Consultoría"
   }
 ]
 

@@ -1,4 +1,4 @@
 :HL["/tebanvisual/_next/static/chunks/0fxkspjagnuy~.css","style"]
-:HL["/tebanvisual/_next/static/chunks/06yxwppybka71.css","style"]
+:HL["/tebanvisual/_next/static/chunks/00-7w~10pzqwp.css","style"]
 :HL["/tebanvisual/_next/static/media/e8f2fbee2754df70-s.p.0fzkl03jw-sdz.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"servicios","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"produccion-estrategia","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"wmhikdVszw4p48sTxPnwf"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"servicios","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"produccion-estrategia","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"Jviq3djY_fmcTHiKX2Hk_"}

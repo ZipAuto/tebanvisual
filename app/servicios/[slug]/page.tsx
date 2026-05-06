@@ -171,29 +171,17 @@ function ServiceMediaSection({ slug }: { slug: string }) {
               Comerciales reales producidos por Teban Visual
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="max-w-2xl mx-auto">
             <div className="rounded-xl overflow-hidden bg-card border border-border">
               <VideoWithFallback
                 src={`${BASE_PATH}/paletinoGrill.mp4`}
-                poster="/Fotografia/DSC06308.jpg"
+                poster="/palestino.png"
                 title="Palatino Grill"
                 description="Comercial para restaurante"
               />
               <div className="p-4">
                 <h3 className="font-semibold text-foreground">Palatino Grill</h3>
                 <p className="text-sm text-muted-foreground">Comercial para restaurante</p>
-              </div>
-            </div>
-            <div className="rounded-xl overflow-hidden bg-card border border-border">
-              <VideoWithFallback
-                src={`${BASE_PATH}/Rancho del vaquero final audio.mp4`}
-                poster="/Fotografia/DSC08444.jpg"
-                title="Rancho del Vaquero"
-                description="Comercial para negocio local"
-              />
-              <div className="p-4">
-                <h3 className="font-semibold text-foreground">Rancho del Vaquero</h3>
-                <p className="text-sm text-muted-foreground">Comercial para negocio local</p>
               </div>
             </div>
           </div>

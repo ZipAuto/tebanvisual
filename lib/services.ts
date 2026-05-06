@@ -37,14 +37,16 @@ export const services: ServiceCategory[] = [
     portfolio: [
       {
         id: "vm-1",
-        title: "Producción Musical BTS",
-        image: "/Fotografia/DSC_8852.jpg",
+        title: "Producción Musical HEREDERO",
+        image: "/Fotografia/HEREDERO.jpeg",
+        videoUrl: "https://www.youtube.com/watch?v=DGoYBqhB8f4&t=2s",
         category: "Videos Musicales"
       },
       {
         id: "vm-2",
-        title: "Artista en Set",
-        image: "/Fotografia/IMG_9881.JPG.jpeg",
+        title: "Producción Musical LOLA",
+        image: "/Fotografia/DSC04392.jpg",
+        videoUrl: "https://www.youtube.com/watch?v=1xS0Fh4SOxw&list=RD1xS0Fh4SOxw&start_radio=1",
         category: "Videos Musicales"
       }
     ],
@@ -69,13 +71,8 @@ export const services: ServiceCategory[] = [
       {
         id: "com-1",
         title: "Palatino Grill",
-        image: "/Fotografia/DSC06308.jpg",
-        category: "Comerciales"
-      },
-      {
-        id: "com-2",
-        title: "Rancho del Vaquero",
-        image: "/Fotografia/DSC08444.jpg",
+        image: "/palestino.png",
+        videoUrl: "/servicios/comerciales/",
         category: "Comerciales"
       }
     ],

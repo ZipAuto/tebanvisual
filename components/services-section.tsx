@@ -3,10 +3,10 @@
 import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Music, Video, Calendar, Share2, Plane, Lightbulb, ArrowRight, Play, Check } from "lucide-react"
+import { Music, Video, Calendar, Share2, Plane, Lightbulb, ArrowRight, Play, Check, ExternalLink } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { services } from "@/lib/services"
+import { services, type PortfolioItem } from "@/lib/services"
 import { FadeIn } from "@/components/parallax-section"
 import { cn } from "@/lib/utils"
 
@@ -19,6 +19,83 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   lightbulb: Lightbulb,
 }
 
+function PortfolioThumb({
+  item,
+  index,
+}: {
+  item: PortfolioItem
+  index: number
+}) {
+  const isYouTube = item.videoUrl?.startsWith("http")
+  const isInternal = item.videoUrl && !isYouTube
+
+  const inner = (
+    <div
+      className={cn(
+        "relative rounded-xl md:rounded-2xl overflow-hidden group",
+        index === 0 ? "col-span-2 aspect-video" : "aspect-square",
+        item.videoUrl ? "cursor-pointer" : "cursor-default"
+      )}
+    >
+      <Image
+        src={item.image}
+        alt={item.title}
+        fill
+        className="object-cover transition-transform duration-500 group-hover:scale-110"
+      />
+
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/10 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-300" />
+
+      {/* Play button — always visible for linked items */}
+      {item.videoUrl && (
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+            <Play className="h-5 w-5 md:h-6 md:w-6 text-primary-foreground ml-1" />
+          </div>
+        </div>
+      )}
+
+      {/* Title + external icon */}
+      <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4">
+        <div className="flex items-center gap-1.5">
+          <p className="text-foreground font-semibold text-sm md:text-base leading-tight">{item.title}</p>
+          {isYouTube && <ExternalLink className="h-3 w-3 text-primary flex-shrink-0" />}
+        </div>
+        <p className="text-muted-foreground text-xs mt-0.5">{item.category}</p>
+      </div>
+    </div>
+  )
+
+  if (isYouTube) {
+    return (
+      <a
+        href={item.videoUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={index === 0 ? "col-span-2" : ""}
+        aria-label={`Ver video: ${item.title}`}
+      >
+        {inner}
+      </a>
+    )
+  }
+
+  if (isInternal) {
+    return (
+      <Link
+        href={item.videoUrl!}
+        className={index === 0 ? "col-span-2" : ""}
+        aria-label={`Ver ${item.title}`}
+      >
+        {inner}
+      </Link>
+    )
+  }
+
+  return <div className={index === 0 ? "col-span-2" : ""}>{inner}</div>
+}
+
 export function ServicesSection() {
   const [activeService, setActiveService] = useState(0)
   const currentService = services[activeService]
@@ -28,10 +105,13 @@ export function ServicesSection() {
     <section className="py-16 md:py-24 bg-background relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)`,
-          backgroundSize: '48px 48px'
-        }} />
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)`,
+            backgroundSize: "48px 48px",
+          }}
+        />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -45,13 +125,13 @@ export function ServicesSection() {
               Soluciones audiovisuales para cada necesidad
             </h2>
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-              Desde videos musicales hasta estrategias de contenido completas, 
+              Desde videos musicales hasta estrategias de contenido completas,
               tenemos el servicio perfecto para tu proyecto.
             </p>
           </div>
         </FadeIn>
 
-        {/* Service Tabs - Horizontal scroll on mobile */}
+        {/* Service Tabs */}
         <div className="mb-8 md:mb-12 overflow-x-auto pb-4 -mx-4 px-4 md:mx-0 md:px-0">
           <div className="flex gap-2 md:gap-3 md:justify-center min-w-max md:min-w-0 md:flex-wrap">
             {services.map((service, index) => {
@@ -97,7 +177,6 @@ export function ServicesSection() {
                 {currentService.description}
               </p>
 
-              {/* Features */}
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
                 {currentService.features.map((feature, index) => (
                   <li key={index} className="flex items-start gap-3">
@@ -108,69 +187,37 @@ export function ServicesSection() {
               </ul>
 
               <div className="flex flex-col sm:flex-row gap-3">
-                <Button 
-                  asChild 
-                  size="lg"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground"
-                >
-                  <Link href="/cotizar">
-                    {currentService.cta}
-                  </Link>
+                <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                  <Link href="/cotizar">{currentService.cta}</Link>
                 </Button>
-                <Button 
-                  asChild 
-                  variant="outline" 
-                  size="lg"
-                >
+                <Button asChild variant="outline" size="lg">
                   <Link href={`/servicios/${currentService.slug}`}>
-                    Ver mas detalles
+                    Ver más detalles
                     <ArrowRight className="h-4 w-4 ml-2" />
                   </Link>
                 </Button>
               </div>
             </div>
 
-            {/* Portfolio Preview */}
+            {/* Portfolio Thumbnails */}
             <div className="order-1 lg:order-2">
               <div className="grid grid-cols-2 gap-3 md:gap-4">
                 {currentService.portfolio.map((item, index) => (
-                  <div 
-                    key={item.id}
-                    className={cn(
-                      "relative rounded-xl md:rounded-2xl overflow-hidden group cursor-pointer",
-                      index === 0 ? "col-span-2 aspect-video" : "aspect-square"
-                    )}
-                  >
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary/90 flex items-center justify-center">
-                        <Play className="h-5 w-5 md:h-6 md:w-6 text-primary-foreground ml-1" />
-                      </div>
-                    </div>
-                    <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                      <p className="text-foreground font-medium text-sm md:text-base">{item.title}</p>
-                    </div>
-                  </div>
+                  <PortfolioThumb key={item.id} item={item} index={index} />
                 ))}
               </div>
             </div>
           </div>
         </FadeIn>
 
-        {/* All Services Grid - Mobile friendly */}
+        {/* All Services Grid */}
         <div className="mt-16 md:mt-24">
           <FadeIn>
             <h3 className="text-xl md:text-2xl font-bold text-foreground text-center mb-8">
               Todos nuestros servicios
             </h3>
           </FadeIn>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4">
             {services.map((service, index) => {
               const ServiceIcon = iconMap[service.icon] || Video
